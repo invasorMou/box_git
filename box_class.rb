@@ -13,7 +13,7 @@
 # 7. if you try to store something else you should see a message telling: "the box is full"
 
 # 8. add a method to empty the box and update its status, if the box is already empty, show the message: "there is nothing in the box"
-
+require 'pry'
 class Box
   def initialize
     @empty = true
@@ -38,4 +38,14 @@ class Box
   def display_info
     "objectt: #{@content.class}, value: #{@content}"
   end
+
+  def discard_item
+    if @empty
+      "there is nothing in the box"
+    else
+      @content = nil
+      @empty = true
+    end
+  end
 end
+binding.pry
