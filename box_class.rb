@@ -12,8 +12,9 @@
 
 # 7. if you try to store something else you should see a message telling: "the box is full"
 
-# 8. add a method to empty the box and update its status, if the box is already empty, show the message: "there is nothing in the box"
-require 'pry'
+# 8. add a method to empty the box and update its status,
+
+ # if the box is already empty, show the message: "there is nothing in the box"
 class Box
   def initialize
     @empty = true
@@ -56,4 +57,3 @@ class Box
       end
   end
 end
-binding.pry
