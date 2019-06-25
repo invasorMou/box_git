@@ -35,7 +35,8 @@ class Box
   end
 
   def display_info
-    "objectt: #{@content.class}, value: #{@content}"
+    puts "object: #{@content.class}, value: #{@content}"
+    puts "methods: #{@content.methods}"
   end
 
 
