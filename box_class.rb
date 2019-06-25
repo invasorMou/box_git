@@ -17,6 +17,7 @@ class Box
   def initialize
     @empty = true
     @content = nil
+    @content2 = nil
   end
 
   def empty?
@@ -45,5 +46,12 @@ class Box
       @content = nil
       @empty = true
     end
+  end
+
+  def store2(stuff)
+      @content2 = stuff
+      unless stuff.nil?
+        @empty = false
+      end
   end
 end
