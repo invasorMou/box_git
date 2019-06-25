@@ -30,4 +30,8 @@ class Box
       @empty = false
     end
   end
+
+  def display_info
+    "objectt: #{@content.class}, value: #{@content}"
+  end
 end
