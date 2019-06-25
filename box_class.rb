@@ -25,9 +25,13 @@ class Box
   end
 
   def store(stuff)
-    @content = stuff
-    unless stuff.nil?
-      @empty = false
+    if @empty
+      @content = stuff
+      unless stuff.nil?
+        @empty = false
+      end
+    else
+      'the box is full'
     end
   end
 
