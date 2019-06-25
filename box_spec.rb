@@ -30,7 +30,15 @@ describe Box do
       new_box.content('shoes')
       expect(new_box.check_box).to include "String"
     end
+
+    context 'storing a new object' do
+      new_box.content('apples')
+      expect(new_box.empty?).to be false
+      expect(new_box.content('oranges')).to eq "the box is full"
+    end
+
   end
+
 
 
 
