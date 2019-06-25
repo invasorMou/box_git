@@ -11,7 +11,7 @@ end
 describe Box do
   describe 'when created' do
   end
-  
+
   context 'if the box is empty' do
   end
 end
@@ -25,7 +25,7 @@ describe Box do
       expect(box.empty?).to be true
     end
   end
-  
+
   context 'if the box is empty' do
     it 'can store stuffs' do
       expect(box.empty?).to be true
