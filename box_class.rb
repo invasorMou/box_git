@@ -17,7 +17,6 @@ class Box
   def initialize
     @empty = true
     @content = nil
-    @content2 = nil
   end
 
   def empty?
@@ -39,19 +38,5 @@ class Box
     "objectt: #{@content.class}, value: #{@content}"
   end
 
-  def discard_item
-    if @empty
-      "there is nothing in the box"
-    else
-      @content = nil
-      @empty = true
-    end
-  end
 
-  def store2(stuff)
-      @content2 = stuff
-      unless stuff.nil?
-        @empty = false
-      end
-  end
 end
