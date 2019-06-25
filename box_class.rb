@@ -17,9 +17,14 @@
 class Box
   def initialize
     @empty = true
+    @content = nil
   end
 
   def empty?
     @empty
+  end
+
+  def store(stuff)
+    @content = stuff
   end
 end
