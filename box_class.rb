@@ -26,5 +26,8 @@ class Box
 
   def store(stuff)
     @content = stuff
+    unless stuff.nil?
+      @empty = false
+    end
   end
 end
