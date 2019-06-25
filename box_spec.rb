@@ -1,3 +1,4 @@
+require_relative 'box_class'
 describe Box do
 
   context 'when created' do
@@ -39,7 +40,19 @@ describe Box do
 
   end
 
+  context 'discard items inside the box' do
+    let(:new_box) {Box.new.content([1,2,3])}
 
+    it "should get empty" do
+      expect(new_box.empty?).to be false
+      new_box.discard_item
+      expect(new_box.empty?).to be true
+    end
 
+    it "already empty show message" do
+      new_box.discard_item
+      expect(new_box.discard_item).to eq "there is nothing in the box"
+    end
+  end
 
 end
